@@ -1,0 +1,35 @@
+using System;
+using System.IO;
+namespace Frozen
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string filePath = @"C:\Users\opilane\Samples\LOGITpe20-Frozen-OOP-Challenge";
+            string fileName = @"frozenI.txt";
+            string fullfilePath = Path.Combine(filePath, fileName);
+            string text = File.ReadAllText(@"C:\Users\opilane\Samples\LOGITpe20-Frozen-OOP-Challenge\frozenI.txt");
+            string[] ReadlinesFromFile = File.ReadAllLines(fullfilePath);
+
+
+            System.Console.WriteLine(text);
+
+            
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\opilane\Samples\LOGITpe20-Frozen-OOP-Challenge\frozenI.txt");
+
+            
+            //System.Console.WriteLine("frozenI.txt = ");
+            foreach (string line in lines)
+            {
+                
+                Console.WriteLine(line);
+            }
+
+
+           
+            System.Console.ReadKey();
+        }
+    }
+}
